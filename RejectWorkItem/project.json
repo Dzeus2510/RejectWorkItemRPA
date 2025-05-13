@@ -1,0 +1,25 @@
+{
+  "Name": "RejectWorkItem",
+  "Description": "Reject WorkItem from ACME, Process Day 5",
+  "ReleaseNotes": null,
+  "MainWorkflow": "Main.xaml",
+  "Dependencies": {
+    "RCA.Activities.Core": "2.2.0.1",
+    "RCA.Activities.NativeBrowser": "4.1.0.1",
+    "RCA.Activities.Excel": "2.1.1.0",
+    "RCA.Activities.Windows": "2.1.2.1",
+    "RCA.Activities.Browser": "2.2.0.1",
+    "RCA.Activities.Common": "1.0.0.1"
+  },
+  "ExcludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "ToolVersion": "2.2.0.3",
+  "ProjectVersion": "0.0.0.0",
+  "PackOptions": {},
+  "RuntimeOptions": {},
+  "ProjectDirectory": "F:\\AkaBotExcercise\\RejectWorkItem",
+  "ProjectFilePath": "F:\\AkaBotExcercise\\RejectWorkItem\\project.json",
+  "ScreenshotsFolder": "F:\\AkaBotExcercise\\RejectWorkItem\\.screenshots"
+}

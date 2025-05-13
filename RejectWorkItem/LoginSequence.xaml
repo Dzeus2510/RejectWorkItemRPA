@@ -1,0 +1,124 @@
+<Activity mc:Ignorable="sap" x:Class="LoginSequence" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:rab="clr-namespace:RCA.Activities.Browser;assembly=RCA.Activities.Browser" xmlns:rac="clr-namespace:RCA.Activities.Core;assembly=RCA.Activities.Core" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Browser" Type="OutArgument(rab:Browser)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>602,1683</sap:VirtualizedContainerService.HintSize>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>RCA.Activities.Core</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>RCA.Activities.Browser</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Core</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Browser</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="LoginSequence" sap:VirtualizedContainerService.HintSize="562,1443">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <rab:OpenBrowser DefaultDownloadFolder="{x:Null}" EdgeExecutablePath="{x:Null}" FirefoxExecutablePath="{x:Null}" HttpProxy="{x:Null}" Password="{x:Null}" UserName="{x:Null}" BrowserName="Chrome" ContinueOnError="False" DisplayName="[167498201] Open Browser(B)" EdgeIeMode="False" EnsureCleanSession="True" HideCommandPromptWindow="True" sap:VirtualizedContainerService.HintSize="540,1319" Maximize="True" QuitBrowserOnCompletedOrFaulted="False" ShowDownloadPrompt="True" TimeoutMS="30000" UiBrowser="[Browser]" Url="https://acme-test.uipath.com" UseInitialBrowserUrl="False">
+      <rab:OpenBrowser.Arguments>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+      </rab:OpenBrowser.Arguments>
+      <rab:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="[167501203] Do" sap:VirtualizedContainerService.HintSize="526,1220">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch DisplayName="[167503203] Try Catch" sap:VirtualizedContainerService.HintSize="504,1096">
+              <TryCatch.Variables>
+                <Variable x:TypeArguments="s:Exception" Name="LoginFailException" />
+              </TryCatch.Variables>
+              <TryCatch.Try>
+                <Sequence DisplayName="[167521406] Sequence" sap:VirtualizedContainerService.HintSize="486,869">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="InvalidLogin" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <rab:TypeInto Browser="{x:Null}" Comments="{x:Null}" LastElement="{x:Null}" LastLocator="{x:Null}" SearchParameter="{x:Null}" ContinueOnError="False" DisplayName="[167523406] Type Into(B)" EmptyField="False" sap:VirtualizedContainerService.HintSize="464,96" SearchMethod="ID" Selector="&lt;html omit:app='' omit:title='' /&gt;&lt;webctrl id='' name='' omit:class='' xpath='//input[@id=&amp;quot;email&amp;quot;]' tag='' /&gt;" Text="vuvuvu2510@gmail.com" TimeoutMS="30000" WaitVisible="False" />
+                  <rab:TypeInto Browser="{x:Null}" Comments="{x:Null}" LastElement="{x:Null}" LastLocator="{x:Null}" SearchParameter="{x:Null}" ContinueOnError="False" DisplayName="[167525416] Type Into(B)" EmptyField="False" sap:VirtualizedContainerService.HintSize="464,96" SearchMethod="ID" Selector="&lt;html omit:app='' omit:title='' /&gt;&lt;webctrl id='' name='' omit:class='' xpath='//input[@id=&amp;quot;password&amp;quot;]' tag='' /&gt;" Text="doanngokubu25102003" TimeoutMS="30000" WaitVisible="False" />
+                  <rab:Click Browser="{x:Null}" Comments="{x:Null}" LastElement="{x:Null}" LastLocator="{x:Null}" SearchParameter="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DisplayName="[167527414] Click(B)" sap:VirtualizedContainerService.HintSize="464,118" KeyModifier="None" MouseButton="MOUSE_LEFT" SearchMethod="ID" Selector="&lt;html omit:app='' omit:title='' /&gt;&lt;webctrl id='' name='' class='' xpath='//*[@class=&amp;quot;btn btn-primary&amp;quot;]' tag='' /&gt;" TimeoutMS="30000" WaitVisible="False" />
+                  <rab:ElementExist Browser="{x:Null}" Comments="{x:Null}" LastElement="{x:Null}" LastLocator="{x:Null}" SearchParameter="{x:Null}" ContinueOnError="False" DisplayName="[167529415] Element Exists(B)" Exists="[InvalidLogin]" sap:VirtualizedContainerService.HintSize="464,68" SearchMethod="ID" Selector="&lt;html omit:app='' omit:title='' /&gt;&lt;webctrl id='' name='' omit:class='' xpath='//*[@class=&amp;quot;invalid-feedback&amp;quot;]' tag='' /&gt;" TimeoutMS="30000" WaitVisible="False" />
+                  <If Condition="[InvalidLogin]" DisplayName="[167531418] If" sap:VirtualizedContainerService.HintSize="464,207">
+                    <If.Then>
+                      <Throw DisplayName="[167535415] Throw" Exception="[New Exception(&quot;Login ACME failed&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" />
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="490,21">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <rac:LogMessage DisplayName="[899880324] Log Message" sap:VirtualizedContainerService.HintSize="314,91" Level="Info" Message="[exception.Message]" />
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+          </Sequence>
+        </ActivityAction>
+      </rab:OpenBrowser.Body>
+      <rab:OpenBrowser.UserProfilePreferences>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </rab:OpenBrowser.UserProfilePreferences>
+    </rab:OpenBrowser>
+  </Sequence>
+</Activity>
